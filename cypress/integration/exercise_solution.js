@@ -25,7 +25,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         //const masteridPD = $masterid
 
         // Add to bag
-        cy.get('#add-to-cart').should('be.visible').click()
+        cy.get('#add-to-cart').should('be.visible').click({force: true})
         cy.wait(500)
 
         // Cheking if the basket has any product or it is empty.
